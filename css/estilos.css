@@ -96,7 +96,7 @@ transform: rotate(-90deg);
     
 }
  
-.uno, .dos, .tres {
+.clickeable {
     border-color: transparent; /* verificar si causa problemas con el color del borde */
     text-align: center;
     line-height: 75px;
@@ -113,10 +113,10 @@ transform: rotate(-90deg);
     -o-border-radius: 75px;
     font-family: "MuseoModerno";
     background: #181818;
-    box-shadow: inset 5px 5px 10px #0a0a0a, 
-            inset -5px -5px 10px #262626
+    box-shadow:  5px 5px 5px #0a0a0a, 
+             -5px -5px 5px #262626
 }
-.dos{
+.clickeable:nth-child(2){
     margin-left: 30px;
     margin-right: 30px;
 }
@@ -129,8 +129,10 @@ transform: rotate(-90deg);
     height: 287px;
     border-radius: 150px;
     background: #181818;
-box-shadow: inset 5px 5px 10px #0a0a0a, 
-            inset -5px -5px 10px #262626
+    /*EFECTO APRETADO-NO APRETADO */
+    box-shadow: inset 5px 5px 5px #0a0a0a, 
+            inset -5px -5px 5px #262626
+    /*-----------------------------------------------*/
            
 }
 .contenedor p{
@@ -191,8 +193,8 @@ box-shadow: inset 5px 5px 10px #0a0a0a,
 /*NEUMORPHISM*/
     border-radius: 150px;
     background: #181818;
-    box-shadow: inset 5px 5px 10px #0a0a0a, 
-                inset -5px -5px 10px #262626
+    box-shadow:  5px 5px 5px #0a0a0a, 
+             -5px -5px 5px #262626
 }
 
 
@@ -201,9 +203,28 @@ box-shadow: inset 5px 5px 10px #0a0a0a,
     margin: auto;
 }
 
-
-
-
+.controls .play:active{
+    background: #181818;
+    box-shadow: inset 5px 5px 5px #0a0a0a, 
+            inset -5px -5px 5px #262626;
+    
+                
+}
+.controls .reset:active{
+    background: #181818;
+    box-shadow: inset 5px 5px 5px #0a0a0a, 
+            inset -5px -5px 5px #262626
+}
+.controls .reset:focus, .play:focus{
+    outline: none;
+}
+.clickeable:focus{
+    background: #181818;
+    box-shadow: inset 5px 5px 5px #0a0a0a, 
+            inset -5px -5px 5px #262626;
+            outline: none;
+        
+}
 
 
 
